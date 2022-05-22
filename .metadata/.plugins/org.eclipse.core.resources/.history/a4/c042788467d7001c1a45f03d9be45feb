@@ -1,0 +1,8 @@
+package com.tonic.web.entity;
+
+public class QuoteVO {
+	private int id;
+	private String korContent;
+	private String engContent;
+	private String source;
+}

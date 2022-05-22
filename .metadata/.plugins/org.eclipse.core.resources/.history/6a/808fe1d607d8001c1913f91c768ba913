@@ -1,0 +1,5 @@
+package com.tonic.web.dao;
+
+public class QuoteDAO {
+
+}

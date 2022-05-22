@@ -1,0 +1,5 @@
+package com.tonic.web.entity;
+
+public class QuoteVO {
+	private int 
+}

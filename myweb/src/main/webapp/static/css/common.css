@@ -1,0 +1,8 @@
+/* init */
+.relative_wrapper {
+    position: relative;
+}
+.invisible {
+    opacity: 0;
+    transition: 0.2s opacity ease-in-out;
+}

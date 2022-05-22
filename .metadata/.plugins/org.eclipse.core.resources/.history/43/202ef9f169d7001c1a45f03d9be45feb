@@ -1,0 +1,26 @@
+package com.tonic.web.service.jdbc;
+
+import java.sql.Connection;
+
+import javax.sql.DataSource;
+
+import com.tonic.web.entity.QuoteVO;
+import com.tonic.web.service.QuoteService;
+
+public class JDBCQuoteService implements QuoteService{
+	private DataSource dataSource;
+	
+	public void setDataSource(DataSource dataSource) {
+		this.dataSource = dataSource;
+	}
+	
+	@Override
+	public QuoteVO getQuote() {
+		String query = "SELECT * FROM t_qoute";
+		Connection conc = dataSource.getConnection(); 
+		QuoteVO quoteVO = new QuoteVO();
+		
+		return quoteVO; 
+	}
+
+}

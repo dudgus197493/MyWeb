@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="selection" value="&lt;!-- &lt;property name=&quot;dataSource&quot; ref=&quot;dataSource&quot; /&gt; --&gt;"/>
+		<list key="findhistory">
+			<item value="&lt;!-- &lt;property name=&quot;dataSource&quot; ref=&quot;dataSource&quot; /&gt; --&gt;"/>
+			<item value="&lt;!-- &lt;property name=&quot;dataSource&quot; ref=&quot;dataSource&quot;&gt;&lt;/property&gt; --&gt;"/>
+		</list>
+	</section>
+</section>

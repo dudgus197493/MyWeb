@@ -1,0 +1,134 @@
+footer {
+    font-family: 'Gothic A1', sans-serif;
+    box-sizing: border-box;
+    width: 100%;
+    height: 10vh;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.tmp {
+    width: 10%;
+}
+.quote {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    font-size: 18px;
+    font-weight: bold;
+}
+.eng {
+    
+    transition: all 0.2s ease-in;
+}
+.hide_p{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.6);
+    opacity: 0;
+    transition: all 0.2s ease-in;
+}
+.kor {
+    margin-right: 10px;
+}
+
+/* Todo ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
+.toDo {
+    width: 10%;
+    text-align: end;
+    font-family: 'Gothic A1', sans-serif;
+    /* font-weight: bold; */
+}
+.toDo button{
+    font-size: 18px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+.toDo  {
+    margin-right: 18px;
+    position: relative;
+}
+.Todo-arrow_menu {
+    box-sizing: border-box;
+    opacity: 0;
+    width: 400px;
+    height: auto;
+    background-color: var(--arrow-bg-color);
+    position: absolute;
+    right: 1%;
+    bottom: 50px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.2s ease-in;
+}
+.Todo-arrow_menu::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 100%;
+    right: 5%;
+    border: 2px solid;
+    background-color: 555;
+    border-color: var(--arrow-after-bg-color);
+    border-top-color: var(--arrow-bg-color);
+    border-width: 10px;
+}
+.Todo-arrow_menu-row {
+    width: 100%;
+    height: 33%;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+.Todo-arrow_menu-row:first-child {
+    padding-top: 10px;
+    
+}
+.Todo-arrow_menu-row:first-child span {
+    font-size: 23px;
+}
+.Todo-arrow_menu-row:nth-child(2) .Todo_lists{
+    padding: 10px 0px;
+}
+.Todo-arrow_menu-row:nth-child(2) .Todo_list{
+    padding: 2px 0px;
+    text-align: start;
+}
+.Todo-arrow_menu-row:last-child {
+    padding-bottom: 10px;
+}
+.Todo-arrow_menu-row:last-child form {
+    display: flex;
+    /* padding-bottom: 10px; */
+}
+.Todo-arrow_menu-row:last-child .Todo_input {
+    width: 350px;
+    height: 100%;
+    background-color: transparent;
+    color: white;
+    font-size: 20px;
+    outline: none;
+    border: none;
+}
+/* Todo ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
+/* Animation ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
+.quote:hover > .eng{
+    transform: translateY(-15px);
+}
+.quote:hover > .hide_p{
+    transform: translateY(10px);
+    opacity: 1;
+}
+/* Animation ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
