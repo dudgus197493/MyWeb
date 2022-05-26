@@ -1,0 +1,12 @@
+nav {
+    background-color: #666;
+    width: 250px;
+    height:85vh;
+}
+.list-label li {
+    list-style: none;
+    margin-bottom: 20px;
+}
+.config-list {
+    display: none;
+}

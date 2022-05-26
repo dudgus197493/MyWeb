@@ -12,9 +12,9 @@
 	<!-- <context:annotation-config /> -->
 	<context:component-scan base-package="com.tonic.web.service, com.tonic.web.dao" />
 	
-    <bean id="quoteService" class="com.tonic.web.service.jdbc.JDBCQuoteService">
-    	<!-- <property name="quoteDAO" ref="quoteDAO" /> -->
-    </bean>
+    <!-- <bean id="quoteService" class="com.tonic.web.service.jdbc.JDBCQuoteService">
+    	<property name="quoteDAO" ref="quoteDAO" />
+    </bean> -->
     <!-- <bean id="quoteDAO" class="com.tonic.web.dao.QuoteDAO">
     	<property name="dataSource" ref="dataSource" />
     </bean> -->

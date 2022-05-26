@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>설정 페이지 - 루트</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="/css/admin/config/config-layout.css">
+    <link rel="stylesheet" href="/css/admin/config/root/add.css">
+    <script>
+        
+    </script>
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <div class="header-column">
+            <a href="/html/index.html">
+                <i class="fa-solid fa-house-chimney"></i>
+            </a>
+        </div>
+        <div clsas="header-column">
+            <button class="info-btn">
+                <i class="fa-solid fa-user"></i>
+            </button>
+        </div>
+    </header>
+    <!-- header -->
+    <!-- nav -->
+    <div class="flex-box">
+        <nav id="cof-nav">
+            <div class="list-label">
+                <span>명언</span>
+                <ul class="config-list">
+                    <li><a href="https://www.naver.com/">명언 목록  </a></li>
+                    <li>명언 추가</li>
+                    <li>명언 삭제</li>
+                </ul>
+            </div>
+            <div class="list-label">
+                <span>배경 이미지</span>
+                <ul class="config-list">
+                    <li>명언 목록2</li>
+                    <li>명언 추가2</li>
+                    <li>명언 삭제2</li>
+                </ul>
+            </div>
+        </nav>
+        <!-- nav -->
+
+        <!-- main -->
+        <main>
+            <form id="add-quote_form" name="add-quote_form" action="post">
+                <h2>명언 추가</h2>
+                <input id="engContent" type="textarea" placeholder="명언 (영문)"/>
+    
+                <input id="korContent" type="text" placeholder="명언 (해석)">
+    
+                <input id="source" type="text" placeholder="출처자 이름">
+    
+                <select>
+                    <option value="" selected>카테고리</option>
+                    <option value="">인생</option>
+                    <option value="">성공</option>
+                </select>
+            </form>
+        </main>
+
+        <!-- main -->
+    </div>
+    <script src="/test/config_nav.js"></script>
+</body>
+</html>

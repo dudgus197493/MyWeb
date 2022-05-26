@@ -1,9 +1,12 @@
 package com.tonic.web.service.jdbc;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.tonic.web.dao.QuoteDAO;
+import com.tonic.web.dao.jdbc.JDBCQuoteDAO;
 import com.tonic.web.entity.QuoteVO;
 import com.tonic.web.service.QuoteService;
 
@@ -12,7 +15,7 @@ public class JDBCQuoteService implements QuoteService{
 	@Autowired
 	private QuoteDAO quoteDAO;
 
-	public void setQuoteDAO(QuoteDAO quoteDAO) {
+	public void setQuoteDAO(JDBCQuoteDAO quoteDAO) {
 		this.quoteDAO = quoteDAO;
 	}
 
@@ -26,5 +29,13 @@ public class JDBCQuoteService implements QuoteService{
 		
 		return quoteVO;
 	}
+
+
+	@Override
+	public List<QuoteVO> getAllQuotes() {
+		List<QuoteVO> quoteList = quoteDAO.getAllQuotes();
+		return quoteList;
+	}
+	
 
 }

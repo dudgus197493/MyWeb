@@ -1,5 +1,0 @@
-INDEX VERSION 1.131
-C:\Users\±è¿µÇö\tonic\myweb\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3323327120.index
-\myweb\src\main\java
-C:\Users\±è¿µÇö\tonic\myweb\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2263756521.index
-\myweb\src\main\java

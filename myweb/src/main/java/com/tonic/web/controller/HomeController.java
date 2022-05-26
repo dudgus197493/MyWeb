@@ -22,10 +22,18 @@ public class HomeController{
 	@RequestMapping("index")
 	@ResponseBody
 	public ModelAndView index() {
-		ModelAndView mv = new ModelAndView("root.index");
+		ModelAndView mv = new ModelAndView("root.root");
 		QuoteVO quoteVO = quoteService.getRandomQuote();
 		mv.addObject("quote", quoteVO);
 		return mv;
+	}
+	
+	@RequestMapping("admin")
+	public ModelAndView admin() {
+		ModelAndView mv = new ModelAndView("admin.main");
+		System.out.println("admin page request!!");
+		return mv;
+		
 	}
 	
 // 	선언 과정에서 @Autowired로 객체 할당을 하였기때문에 생정자가 필요없음

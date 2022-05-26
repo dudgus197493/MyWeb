@@ -1,0 +1,38 @@
+:root {
+    --input-border-bottom : 2px solid rgba(128, 128, 128, 0.4);
+    --focus-input-border-bottom : 2px solid rgba(128, 128, 128, 1);
+}
+#add-quote_form {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
+}
+#add-quote_form h2 {
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+#add-quote_form input {
+    width: 800px;
+    margin: 15px 0px;
+    padding: 15px 0px;
+    border:none;
+    border-bottom: var(--input-border-bottom);
+    outline: none;
+    transition: 0.2s;
+    font-size: 20px;
+}
+#add-quote_form input::placeholder {
+    font-size: 15px;
+    font-style: italic;
+}
+#add-quote_form input:focus{
+    border-bottom: var(--focus-input-border-bottom);
+}
+#add-quote_form select {
+    /* width: 200px;
+    height: 50px; */
+    padding: 15px 10px;
+    text-align: center;
+}

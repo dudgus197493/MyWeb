@@ -9,4 +9,30 @@
     <put-attribute name="main" value="/WEB-INF/view/{1}.jsp" />
     <put-attribute name="footer" value="/WEB-INF/view/inc/footer.jsp" />
   </definition>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <!-- 관리자 페이지 -->
+  <definition name="admin.*" template="/WEB-INF/view/admin/inc/layout.jsp">
+    <put-attribute name="title" value="관리자 페이지 - 메인" />
+    <put-attribute name="header" value="/WEB-INF/view/admin/inc/header.jsp" />
+    <put-attribute name="main" value="/WEB-INF/view/admin/{1}.jsp" />
+  </definition>
+  <definition name="config.*.*" template="/WEB-INF/view/admin/config/inc/layout.jsp">
+    <put-attribute name="title" value="{2}" />
+    <put-attribute name="header" value="/WEB-INF/view/admin/inc/header.jsp" />
+    <put-attribute name="aside" value="/WEB-INF/view/admin/config/inc/aside.jsp" />
+    <put-attribute name="main" value="/WEB-INF/view/admin/config/{1}/{2}.jsp" />
+  </definition>
 </tiles-definitions>

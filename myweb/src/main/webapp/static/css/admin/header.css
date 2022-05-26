@@ -1,0 +1,18 @@
+/* admin-header css */
+header {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 15px;
+    box-sizing: border-box;
+    background: #999;
+}
+header i {
+    /* font-size: 25px; */
+    font-size: 25px;
+}
+.info-btn {
+    border: none;
+    background:none;
+}

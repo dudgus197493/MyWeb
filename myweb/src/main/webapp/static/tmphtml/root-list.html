@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>설정 페이지 - 루트</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="/css/admin/config/config-layout.css">
+    <link rel="stylesheet" href="/css/admin/config/root/list.css">
+    <script>
+        window.addEventListener("load", function(){
+            const quoteSort = document.querySelector("#quote-sort"),
+                sortOptions = document.querySelector("#sort-options");
+
+                sortOptions.onchange = function(){
+                    
+                }
+
+        })
+    </script>
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <div class="header-column">
+            <a href="/html/index.html">
+                <i class="fa-solid fa-house-chimney"></i>
+            </a>
+        </div>
+        <div clsas="header-column">
+            <button class="info-btn">
+                <i class="fa-solid fa-user"></i>
+            </button>
+        </div>
+    </header>
+    <!-- header -->
+    <!-- nav -->
+    <div class="flex-box">
+        <nav id="cof-nav">
+            <div class="list-label">
+                <span>명언</span>
+                <ul class="config-list">
+                    <li><a href="https://www.naver.com/">명언 목록  </a></li>
+                    <li>명언 추가</li>
+                    <li>명언 삭제</li>
+                </ul>
+            </div>
+            <div class="list-label">
+                <span>배경 이미지</span>
+                <ul class="config-list">
+                    <li>명언 목록2</li>
+                    <li>명언 추가2</li>
+                    <li>명언 삭제2</li>
+                </ul>
+            </div>
+        </nav>
+        <!-- nav -->
+    
+        <main>
+            <form class="quote-search" action="">
+                <input id="quote-search_input" type="text" placeholder="검색">
+                <select name="" id="">
+                    <option value="">키워드[ENG]</option>
+                    <option value="">키워드[KOR]</option>
+                    <option value="">카테고리</option>
+                    <option value="">출처인</option>
+                </select>
+            </form>
+            <div id="quote-sort">
+                <span id="quote-count">3개</span>
+                <select id="sort-options">
+                    <option value="1" selected>정렬기준</option>
+                    <option value="2">이름순[ENG]</option>
+                    <option value="3">이름순[KOR]</option>
+                </select>
+            </div>
+                <ul id="quote-list">
+                    <li class="quote">
+                        <span class="quote-number">1.</span>
+                        <div class="quote-content">
+                            <span class="content-eng"><i class="fa-solid fa-quote-left"></i>
+                                There is an immeasurable distance between late and too late.</span>
+                            <span class="content-kor">늦은 것과 매우 늦은 것 사이에는 측정할 수 없을 만큼의 거리가 놓여 있다.
+                                <i class="fa-solid fa-quote-right"></i></span>
+                            <span class="source">Og Mandino</span>
+                        </div>
+                        <span class="quote-del">x</span>
+                    </li>
+                    <!-- ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ -->
+                    <li class="quote">
+                        <span class="quote-number">1.</span>
+                        <div class="quote-content">
+                            <span class="content-eng"><i class="fa-solid fa-quote-left"></i>
+                                There is an immeasurable distance between late and too late.</span>
+                            <span class="content-kor">늦은 것과 매우 늦은 것 사이에는 측정할 수 없을 만큼의 거리가 놓여 있다
+                                .fasdffqwehoifjaisdfjhuiasdhfusfoasiudfhaosdiuhfasodufasdoifuashdoifuahsodifuh<i class="fa-solid fa-quote-right"></i></span>
+                            <span class="source">Og Mandino</span>
+                        </div>
+                    </li>
+                    <li class="quote">
+                        <span class="quote-number">1.</span>
+                        <div class="quote-content">
+                            <span class="content-eng"><i class="fa-solid fa-quote-left"></i>
+                                There is an immeasurable distance between late and too late.</span>
+                            <span class="content-kor">늦은 것과 매우 늦은 것 사이에는 측정할 수 없을 만큼의 거리가 놓여 있다
+                                .fasdffqwehoifjaisdfjhuiasdhfusfoasiudfhaosdiuhfasodufasdoifuashdoifuahsodifuh<i class="fa-solid fa-quote-right"></i></span>
+                            <span class="source">Og Mandino</span>
+                        </div>
+                    </li>
+                    <li class="quote">
+                        <span class="quote-number">1.</span>
+                        <div class="quote-content">
+                            <span class="content-eng"><i class="fa-solid fa-quote-left"></i>
+                                There is an immeasurable distance between late and too late.</span>
+                            <span class="content-kor">늦은 것과 매우 늦은 것 사이에는 측정할 수 없을 만큼의 거리가 놓여 있다
+                                .fasdffqwehoifjaisdfjhuiasdhfusfoasiudfhaosdiuhfasodufasdoifuashdoifuahsodifuh<i class="fa-solid fa-quote-right"></i></span>
+                            <span class="source">Og Mandino</span>
+                        </div>
+                    </li>
+                    <li class="quote">
+                        <span class="quote-number">1.</span>
+                        <div class="quote-content">
+                            <span class="content-eng"><i class="fa-solid fa-quote-left"></i>
+                                There is an immeasurable distance between late and too late.</span>
+                            <span class="content-kor">늦은 것과 매우 늦은 것 사이에는 측정할 수 없을 만큼의 거리가 놓여 있다
+                                .fasdffqwehoifjaisdfjhuiasdhfusfoasiudfhaosdiuhfasodufasdoifuashdoifuahsodifuh<i class="fa-solid fa-quote-right"></i></span>
+                            <span class="source">Og Mandino</span>
+                        </div>
+                    </li>
+                    <li class="quote">
+                        <span class="quote-number">1.</span>
+                        <div class="quote-content">
+                            <span class="content-eng"><i class="fa-solid fa-quote-left"></i>
+                                There is an immeasurable distance between late and too late.</span>
+                            <span class="content-kor">늦은 것과 매우 늦은 것 사이에는 측정할 수 없을 만큼의 거리가 놓여 있다
+                                .fasdffqwehoifjaisdfjhuiasdhfusfoasiudfhaosdiuhfasodufasdoifuashdoifuahsodifuh<i class="fa-solid fa-quote-right"></i></span>
+                            <span class="source">Og Mandino</span>
+                        </div>
+                    </li>
+                    <li class="quote">
+                        <span class="quote-number">1.</span>
+                        <div class="quote-content">
+                            <span class="content-eng"><i class="fa-solid fa-quote-left"></i>
+                                There is an immeasurable distance between late and too late.</span>
+                            <span class="content-kor">늦은 것과 매우 늦은 것 사이에는 측정할 수 없을 만큼의 거리가 놓여 있다
+                                .fasdffqwehoifjaisdfjhuiasdhfusfoasiudfhaosdiuhfasodufasdoifuashdoifuahsodifuh<i class="fa-solid fa-quote-right"></i></span>
+                            <span class="source">Og Mandino</span>
+                        </div>
+                    </li>
+                    
+                </ul>  
+        </main>
+    </div>
+    <script src="/test/config_nav.js"></script>
+</body>
+</html>

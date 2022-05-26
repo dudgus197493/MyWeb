@@ -1,0 +1,28 @@
+.admin-menu {
+    width: 100%;
+    height: auto;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding-top: 20px;
+}
+.admin-menu_column {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 40vh;
+    width: 100%;
+    margin: 10px 0px;
+}
+.page-link {
+    display: inline-block;
+    height: 250px;
+    width: 450px;
+    border: 1px solid white;
+}
+.root-page {
+    background-image: url("/images/admin/root.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}

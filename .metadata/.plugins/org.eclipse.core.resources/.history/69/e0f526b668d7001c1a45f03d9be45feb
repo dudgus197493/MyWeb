@@ -1,5 +1,0 @@
-package com.tonic.web.service;
-
-public interface QuoteService {
-
-}

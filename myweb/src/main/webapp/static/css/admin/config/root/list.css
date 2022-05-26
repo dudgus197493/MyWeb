@@ -1,0 +1,76 @@
+/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡsearch-formㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
+.quote-search {
+    margin-top: 50px;
+}
+.quote-search input {
+    border: none;
+    border-bottom: 2px solid rgba(128, 128, 128, 0.4);
+    outline: none;
+    font-size: 20px;
+    padding: 2px 10px;
+    height:25px;
+    width:400px;
+    text-align: center;
+    transition: 0.2s;
+}
+.quote-search input:focus {
+    border-bottom: 2px solid rgba(128, 128, 128, 1);
+}
+/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡsearch-formㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
+
+/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡquote-sortㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
+#quote-sort {
+    margin: 25px 0px;
+    font-size: 30px;
+}
+/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡquote-sortㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
+
+
+/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡquote-listㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
+#quote-list {
+    width: 80%;
+    height: 65vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#quote-list::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
+}
+.quote {
+    display: flex;
+    width: inherit;
+    /* flex-direction:; */
+}
+.quote-number {
+    width: 5%;
+    font-size: 30px;
+}
+.quote-content {
+    width: 90%;
+    display: flex;
+    /* width: inherit; */
+    flex-direction: column;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.4);
+}
+.content-eng, .content-kor {
+    font-size: 20px;
+    margin: 10px 0px;
+}
+.quote .span .i {
+    font-size: 40px;
+}
+.quote .source {
+    text-align: end;
+}
+.quote-del {
+    font-size: 20px;
+    width: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡquote-listㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
+

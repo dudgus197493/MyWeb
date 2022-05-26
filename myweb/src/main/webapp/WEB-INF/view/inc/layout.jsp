@@ -29,5 +29,6 @@
     <script src="scripts/arrow_menu.js"></script>
     <script src="scripts/search.js"></script>
     <script src="scripts/todo.js"></script>
+    <script src="scripts/command.js"></script>
 </body>
 </html>
