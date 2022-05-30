@@ -1,12 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>This Page is Test</title>
-</head>
+
 <body>
-	<h1>Hello World!!</h1>
+	<h1>Hello Test</h1>
+	<h2>This is Ajax test</h2>
+	<button>랜덤명언호출</button>
+	<span class="random-qte"></span>
+	<script src="/scripts/ajaxtest.js"></script>
 </body>
-</html>
