@@ -9,4 +9,5 @@ public interface QuoteDAO {
 	public int getLastId();
 	public QuoteVO getRandomQuote(int maxId);
 	public List<QuoteVO> getAllQuotes();
+	public List<QuoteVO> searchQuotes(String keyword, String option);
 }

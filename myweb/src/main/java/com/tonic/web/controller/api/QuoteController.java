@@ -1,8 +1,10 @@
 package com.tonic.web.controller.api;
 
+import java.util.HashMap;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -16,15 +18,22 @@ public class QuoteController {
 	QuoteService quoteService;
 	
 	@RequestMapping("list")
-	public List<QuoteVO> getAllQuotes() {
+	public List<QuoteVO> list() {
 		List<QuoteVO> quotelist = quoteService.getAllQuotes();
 		System.out.println(quotelist);
 		return quotelist;
 	}
 	@RequestMapping("random")
-	public QuoteVO getRandomQuote() {
+	public QuoteVO random() {
 		QuoteVO quoteVO = quoteService.getRandomQuote();
 		
 		return quoteVO;
+	}
+	@RequestMapping("search")
+	public List<QuoteVO> search(@RequestBody HashMap<String, String> inputMap){
+		String keyword = inputMap.get("keyword");
+		String option = inputMap.get("option");
+		System.out.printf("keyword = %s / option = %s", keyword, option);
+		return null;
 	}
 }
