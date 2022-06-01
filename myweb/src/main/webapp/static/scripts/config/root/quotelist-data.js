@@ -1,6 +1,6 @@
 window.addEventListener("load", function(){
 // 최초 요청시 데이터 담기 ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
-	var dataList;
+	let dataList;
     let httpRequest;
 
     httpRequest = new XMLHttpRequest();
@@ -36,9 +36,10 @@ window.addEventListener("load", function(){
         httpRequest.onreadystatechange = function(){
             if(httpRequest.readyState === XMLHttpRequest.DONE) {
                 if(httpRequest.status === 200) {
-                    /*dataList = JSON.parse(httpRequest.response);
-                    init();*/
-                    console.log("Request Success!");
+                    dataList = JSON.parse(httpRequest.response);
+                    console.log(dataList);
+                    init();
+                    console.log("Request Success!!!");
                 } else {
                     alert("Request Error!");
                 }

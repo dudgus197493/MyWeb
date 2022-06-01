@@ -36,6 +36,15 @@ public class JDBCQuoteService implements QuoteService{
 		List<QuoteVO> quoteList = quoteDAO.getAllQuotes();
 		return quoteList;
 	}
+
+
+	@Override
+	public List<QuoteVO> searchQuotes(String keyword, String option) {
+		List<QuoteVO> quoteList = quoteDAO.searchQuotes(keyword, option);
+		return quoteList;
+	}
+	
+	
 	
 
 }
