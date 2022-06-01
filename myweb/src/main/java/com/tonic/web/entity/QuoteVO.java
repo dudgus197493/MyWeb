@@ -5,12 +5,14 @@ public class QuoteVO {
 	private String engContent;
 	private String korContent;
 	private String source;
+	private String category;
 	
-	public QuoteVO(int id, String engContent, String korContent, String source) {
+	public QuoteVO(int id, String engContent, String korContent, String source, String category) {
 		this.id = id;
 		this.engContent = engContent;
 		this.korContent = korContent;
-		this.source = source;
+		this.setSource(source);
+		this.category = category;
 	}
 	
 	public int getId() {
@@ -41,10 +43,18 @@ public class QuoteVO {
 			this.source = source;			
 		}
 	}
+	public String getCategory() {
+		return category;
+	}
+	public void setCategory(String category) {
+		this.category = category;
+	}
+
 	@Override
 	public String toString() {
-		return "QuoteVO [id=" + id + ", korContent=" + korContent + ", engContent=" + engContent + ", source=" + source
-				+ "]";
+		return "QuoteVO [id=" + id + ", engContent=" + engContent + ", korContent=" + korContent + ", source=" + source
+				+ ", category=" + category + "]";
 	}
+	
 	
 }

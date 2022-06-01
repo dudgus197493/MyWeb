@@ -41,7 +41,7 @@ public class JDBCQuoteDAO implements QuoteDAO{
 	public QuoteVO getRandomQuote(int maxId) {								// DB에 등록된 인용구중 랜덤으로 한 개 구하기
 		final String QUERY = "SELECT * FROM t_quote WHERE id = ?";
 		int randomId = (int)(Math.random() * maxId + 1);					// 랜덤으로 불러올 quote 아이디번호 설정
-		System.out.println(QUERY);
+		System.out.println(randomId);
 		QuoteVO quoteVO;
 		try {
 			Connection conn = dataSource.getConnection();
@@ -54,7 +54,8 @@ public class JDBCQuoteDAO implements QuoteDAO{
 						rs.getInt("id"),
 						rs.getString("engContent"),
 						rs.getString("korContent"),
-						rs.getString("source")
+						rs.getString("source"),
+						rs.getString("category")
 						);
 //				quoteVO.setId(rs.getInt("id"));
 //				quoteVO.setEngContent(rs.getString("engContent"));
@@ -73,22 +74,51 @@ public class JDBCQuoteDAO implements QuoteDAO{
 	
 	public List<QuoteVO> getAllQuotes() { 
 		final String QUERY = "SELECT * FROM t_quote";
-		List<QuoteVO> quoteList = new ArrayList<QuoteVO>();
 		try {
 			Connection conn = dataSource.getConnection();
 			PreparedStatement pstmt = conn.prepareStatement(QUERY);
 			ResultSet rs = pstmt.executeQuery();
-			while(rs.next()) {
-				QuoteVO quoteVO = new QuoteVO(
-						rs.getInt("id"),
-						rs.getString("engContent"),
-						rs.getString("korContent"),
-						rs.getString("source")
-						);
-				quoteList.add(quoteVO);
-			}
+			List<QuoteVO> quoteList = returnQuoteList(rs);
+//			while(rs.next()) {
+//				QuoteVO quoteVO = new QuoteVO(
+//						rs.getInt("id"),
+//						rs.getString("engContent"),
+//						rs.getString("korContent"),
+//						rs.getString("source"),
+//						rs.getString("category")
+//						);
+//				quoteList.add(quoteVO);
+//			}
+			return quoteList;
 		} catch (SQLException e) {
 			e.printStackTrace();
+		}
+		return null;
+	}
+	public List<QuoteVO> searchQuotes(String keyword, String option){
+		String query;
+		if(option == "1") {
+			query = "";
+		} else if (option == "2") {
+			query = "";
+		} else if (option == "3") {
+			query = "";
+		}
+		return null;
+	}
+	
+	
+	public List<QuoteVO> returnQuoteList(ResultSet rs) throws SQLException {
+		List<QuoteVO> quoteList = new ArrayList<QuoteVO>();
+		while(rs.next()) {
+			QuoteVO quoteVO = new QuoteVO(
+					rs.getInt("id"),
+					rs.getString("engContent"),
+					rs.getString("korContent"),
+					rs.getString("source"),
+					rs.getString("category")
+					);
+			quoteList.add(quoteVO);
 		}
 		return quoteList;
 	}
