@@ -33,7 +33,8 @@ public class QuoteController {
 	public List<QuoteVO> search(@RequestBody HashMap<String, String> inputMap){
 		String keyword = inputMap.get("keyword");
 		String option = inputMap.get("option");
-		System.out.printf("keyword = %s / option = %s", keyword, option);
-		return null;
+		System.out.printf("keyword = %s / option = %s", keyword, option);					// POST 요청 데이터 확인 로그
+		List<QuoteVO> quoteList = quoteService.searchQuotes(keyword, option);
+		return quoteList;
 	}
 }

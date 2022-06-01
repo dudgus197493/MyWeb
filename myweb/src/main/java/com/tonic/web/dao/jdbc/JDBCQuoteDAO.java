@@ -95,20 +95,40 @@ public class JDBCQuoteDAO implements QuoteDAO{
 		}
 		return null;
 	}
-	public List<QuoteVO> searchQuotes(String keyword, String option){
+	public List<QuoteVO> searchQuotes(String keyword, String option){						// option ['키워드', '카테고리', '소스']
 		String query;
-		if(option == "1") {
-			query = "";
-		} else if (option == "2") {
-			query = "";
-		} else if (option == "3") {
-			query = "";
+		if(option.equals("1")) {												// 키워드
+			query = "SELECT * FROM t_quote WHERE korContent LIKE CONCAT('%',?,'%') OR engContent LIKE CONCAT('%',?,'%')";
+		} else if (option.equals("2")) {										// 카테고리
+			query = "SELECT * FROM t_quote WHERE category LIKE CONCAT('%',?,'%')";
+		} else {																// 출처자
+			query = "SELECT * FROM t_quote WHERE source LIKE CONCAT('%',?,'%')";
 		}
+		
+		try {
+			Connection conn = dataSource.getConnection();
+			PreparedStatement pstmt = conn.prepareStatement(query);
+			if(option.equals("1")) {
+				pstmt.setString(1, keyword);
+				pstmt.setString(2, keyword);
+			} else {
+				pstmt.setString(1, keyword);
+			}
+			ResultSet rs = pstmt.executeQuery();
+			List<QuoteVO> quoteList = returnQuoteList(rs);
+//			for(int i=0; i<quoteList.size(); i++) {				리턴값 로그 확인
+//				System.out.println(quoteList.get(i));
+//			}
+			return quoteList;
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
 		return null;
 	}
 	
 	
-	public List<QuoteVO> returnQuoteList(ResultSet rs) throws SQLException {
+	private List<QuoteVO> returnQuoteList(ResultSet rs) throws SQLException {
 		List<QuoteVO> quoteList = new ArrayList<QuoteVO>();
 		while(rs.next()) {
 			QuoteVO quoteVO = new QuoteVO(
