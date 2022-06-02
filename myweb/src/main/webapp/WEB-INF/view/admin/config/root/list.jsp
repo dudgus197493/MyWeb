@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-    <link rel="stylesheet" href="${request.getContext() }/css/admin/config/root/list.css">
+    <link rel="stylesheet" href="/css/admin/config/root/list.css">
 		<main>
             <form class="quote-search">
                 <input id="quote-search_input" type="text" placeholder="검색">
@@ -36,11 +36,10 @@
 	                            </span>
 	                            <span class="source"><!-- source --></span>
 	                        </div>
-	                        <span class="quote-del">x</span>
+	                        <!-- <span class="quote-del">x</span> -->
+	                        <button class="quote-del"><i class="fa-solid fa-xmark"></i></button>
                     	</li>	
 					</template>
-                	<c:forEach var="quote" items="${quoteList }">
-                	</c:forEach>
                     <!-- <li class="quote">
                         <span class="quote-number">1.</span>
                         <div class="quote-content">

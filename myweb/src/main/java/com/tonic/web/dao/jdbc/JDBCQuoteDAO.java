@@ -23,7 +23,7 @@ public class JDBCQuoteDAO implements QuoteDAO{
 	public void setDataSource(DataSource dataSource) {
 		this.dataSource = dataSource;
 	}
-	public int getLastId() {												// DB¿¡ µî·ÏµÈ ÀÎ¿ë±¸ÀÇ ÃÑ °¹¼ö ±¸ÇÏ±â
+	public int getLastId() {												// DBï¿½ï¿½ ï¿½ï¿½Ïµï¿½ ï¿½Î¿ë±¸ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï±ï¿½
 		final String QUERY = "SELECT MAX(id) AS id FROM t_quote";
 		int maxId = 0;
 		try {
@@ -38,9 +38,9 @@ public class JDBCQuoteDAO implements QuoteDAO{
 		}
 		return maxId;
 	}
-	public QuoteVO getRandomQuote(int maxId) {								// DB¿¡ µî·ÏµÈ ÀÎ¿ë±¸Áß ·£´ýÀ¸·Î ÇÑ °³ ±¸ÇÏ±â
+	public QuoteVO getRandomQuote(int maxId) {								// DBï¿½ï¿½ ï¿½ï¿½Ïµï¿½ ï¿½Î¿ë±¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½Ï±ï¿½
 		final String QUERY = "SELECT * FROM t_quote WHERE id = ?";
-		int randomId = (int)(Math.random() * maxId + 1);					// ·£´ýÀ¸·Î ºÒ·¯¿Ã quote ¾ÆÀÌµð¹øÈ£ ¼³Á¤
+		int randomId = (int)(Math.random() * maxId + 1);					// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ò·ï¿½ï¿½ï¿½ quote ï¿½ï¿½ï¿½Ìµï¿½ï¿½È£ ï¿½ï¿½ï¿½ï¿½
 		System.out.println(randomId);
 		QuoteVO quoteVO;
 		try {
@@ -64,7 +64,7 @@ public class JDBCQuoteDAO implements QuoteDAO{
 //				System.out.println(quoteVO);
 				return quoteVO;
 			} else {
-				System.out.println("ÇØ´ç ¹øÈ£ÀÇ ÀÎ¿ë±¸¸¦ Ã£Áö ¸øÇß½À´Ï´Ù.");
+				System.out.println("ï¿½Ø´ï¿½ ï¿½ï¿½È£ï¿½ï¿½ ï¿½Î¿ë±¸ï¿½ï¿½ Ã£ï¿½ï¿½ ï¿½ï¿½ï¿½ß½ï¿½ï¿½Ï´ï¿½.");
 			}
 		}catch(Exception e) {
 			e.printStackTrace();
@@ -95,13 +95,13 @@ public class JDBCQuoteDAO implements QuoteDAO{
 		}
 		return null;
 	}
-	public List<QuoteVO> searchQuotes(String keyword, String option){						// option ['Å°¿öµå', 'Ä«Å×°í¸®', '¼Ò½º']
+	public List<QuoteVO> searchQuotes(String keyword, String option){						// option ['Å°ï¿½ï¿½ï¿½ï¿½', 'Ä«ï¿½×°ï¿½', 'ï¿½Ò½ï¿½']
 		String query;
-		if(option.equals("1")) {												// Å°¿öµå
+		if(option.equals("1")) {												// Å°ï¿½ï¿½ï¿½ï¿½
 			query = "SELECT * FROM t_quote WHERE korContent LIKE CONCAT('%',?,'%') OR engContent LIKE CONCAT('%',?,'%')";
-		} else if (option.equals("2")) {										// Ä«Å×°í¸®
+		} else if (option.equals("2")) {										// Ä«ï¿½×°ï¿½
 			query = "SELECT * FROM t_quote WHERE category LIKE CONCAT('%',?,'%')";
-		} else {																// ÃâÃ³ÀÚ
+		} else {																// ï¿½ï¿½Ã³ï¿½ï¿½
 			query = "SELECT * FROM t_quote WHERE source LIKE CONCAT('%',?,'%')";
 		}
 		
@@ -116,7 +116,7 @@ public class JDBCQuoteDAO implements QuoteDAO{
 			}
 			ResultSet rs = pstmt.executeQuery();
 			List<QuoteVO> quoteList = returnQuoteList(rs);
-//			for(int i=0; i<quoteList.size(); i++) {				¸®ÅÏ°ª ·Î±× È®ÀÎ
+//			for(int i=0; i<quoteList.size(); i++) {				ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½Î±ï¿½ È®ï¿½ï¿½
 //				System.out.println(quoteList.get(i));
 //			}
 			return quoteList;
@@ -141,5 +141,30 @@ public class JDBCQuoteDAO implements QuoteDAO{
 			quoteList.add(quoteVO);
 		}
 		return quoteList;
+	}
+	@Override
+	public void delQuote(String keyword) {
+		final String QUERY = "DELETE FROM t_quote WHERE engContent = ?";
+		try {
+			Connection conn = dataSource.getConnection();
+			PreparedStatement pstmt = conn.prepareStatement(QUERY);
+			pstmt.setString(1, keyword);
+			pstmt.executeUpdate();
+		} catch (SQLException e) {
+			System.out.println("delQuoteì—ì„œ ì˜ˆì™¸ ë°œìƒ!");
+			e.printStackTrace();
+		}	
+	}
+	@Override
+	public void sortId() {
+		final String QUERY = "CALL sortID()";
+		try {
+			Connection conn = dataSource.getConnection();
+			PreparedStatement pstmt = conn.prepareStatement(QUERY);
+			pstmt.executeUpdate();
+		} catch (SQLException e) {
+			System.out.println("sortIdì—ì„œ ì˜ˆì™¸ ë°œìƒ!");
+			e.printStackTrace();
+		}
 	}
 }

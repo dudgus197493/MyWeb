@@ -1,5 +1,6 @@
 window.addEventListener("load", function(){
 // 최초 요청시 데이터 담기 ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+	console.log("script.ver3");
 	let dataList;
     let httpRequest;
 
@@ -61,7 +62,37 @@ window.addEventListener("load", function(){
 //  quoteList ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
     let quoteList = document.querySelector("#quote-list"),
         quoteTemplate = quoteList.querySelector("template");
-        
+    
+    quoteList.addEventListener("click",function(e){							   // 명언삭제 버튼 기능
+        if(!(e.target.className == "quote-del" || e.target.nodeName == "I")) { // 타겟이 버튼, 아이콘 둘다 아니라면 리턴.
+            return;
+        }
+        let parentNodeLi = e.target;
+        for(; parentNodeLi.nodeName != "LI"; parentNodeLi = parentNodeLi.parentNode);	// 타겟 노드가 li가 될떄까지 부모노드 불러옴.
+        let targetNumber = parentNodeLi.querySelector(".quote-number").textContent;
+        let delData = dataList.splice(Number(targetNumber) - 1, 1);
+        init();
+
+        // del Controller Request
+        let reqJson = new Object();
+        reqJson.keyword = delData[0].engContent;
+
+        httpRequest = new XMLHttpRequest();
+        httpRequest.onreadystatechange = function(){
+            if(httpRequest.readyState === XMLHttpRequest.DONE) {
+                if(httpRequest.status === 200) {
+                    alert("해당 데이터가 삭제되었습니다!");
+                } else {
+                    alert("Request Error!");
+                }
+            }
+        }
+        httpRequest.open("POST", "/api/quote/del", false);
+         /* 요청 Header에 컨텐츠 타입은 Json으로 사전 정의 */
+	    httpRequest.setRequestHeader('Content-Type', 'application/json');
+	    /* 정의된 서버에 Json 형식의 요청 Data를 포함하여 요청을 전송 */
+	    httpRequest.send(JSON.stringify(reqJson));
+    })
     init();
 
     
@@ -94,7 +125,7 @@ window.addEventListener("load", function(){
                 korContentSpan = cloneNode.querySelector(".content-kor .content"),
                 sourceSpan = cloneNode.querySelector(".source");
 
-                quoteNumber.textContent = i + 1;
+                quoteNumber.textContent = i + 1 + ".";
                 engContentSpan.textContent = dataList[i].engContent;
                 korContentSpan.textContent = dataList[i].korContent;
                 sourceSpan.textContent = dataList[i].sourceSpan;
@@ -114,7 +145,6 @@ window.addEventListener("load", function(){
             return 0;
         })
     }
-
     function descendingEng(){
         dataList.sort(function(a, b) {
             x = a.engContent.toLowerCase();
@@ -139,7 +169,6 @@ window.addEventListener("load", function(){
             return 0;
         })
     }
-
     function descendingKor(){
         dataList.sort(function(a, b) {
             x = a.korContent.toLowerCase();

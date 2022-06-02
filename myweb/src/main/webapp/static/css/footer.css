@@ -23,7 +23,8 @@ footer {
     font-weight: bold;
 }
 .eng {
-    
+	justify-content:center;
+    text-align:center;
     transition: all 0.2s ease-in;
 }
 .hide_p{
@@ -39,7 +40,7 @@ footer {
     margin-right: 10px;
 }
 
-/* Todo ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
+/* Todo �뀫�뀫�뀫�뀫�뀫�뀫�뀫�뀫�뀫�뀫�뀫�뀫�뀫�뀫�뀫�뀫�뀫�뀫�뀫�뀫�뀫�뀫�뀫�뀫�뀫 */
 .toDo {
     width: 10%;
     text-align: end;
@@ -122,8 +123,8 @@ footer {
     outline: none;
     border: none;
 }
-/* Todo ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
-/* Animation ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
+/* Todo �뀫�뀫�뀫�뀫�뀫�뀫�뀫�뀫�뀫�뀫�뀫�뀫�뀫�뀫�뀫�뀫�뀫�뀫�뀫�뀫�뀫�뀫�뀫�뀫�뀫 */
+/* Animation �뀫�뀫�뀫�뀫�뀫�뀫�뀫�뀫�뀫�뀫�뀫�뀫�뀫�뀫�뀫�뀫�뀫�뀫*/
 .quote:hover > .eng{
     transform: translateY(-15px);
 }
@@ -131,4 +132,4 @@ footer {
     transform: translateY(10px);
     opacity: 1;
 }
-/* Animation ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
+/* Animation �뀫�뀫�뀫�뀫�뀫�뀫�뀫�뀫�뀫�뀫�뀫�뀫�뀫�뀫�뀫�뀫�뀫�뀫*/
