@@ -43,6 +43,13 @@ public class JDBCQuoteService implements QuoteService{
 		List<QuoteVO> quoteList = quoteDAO.searchQuotes(keyword, option);
 		return quoteList;
 	}
+
+
+	@Override
+	public void delQuote(String keyword) {
+		quoteDAO.delQuote(keyword);
+		quoteDAO.sortId();
+	}
 	
 	
 	

@@ -1,4 +1,4 @@
-/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡsearch-formㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
+/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡsearch-formㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
 .quote-search {
     margin-top: 50px;
 }
@@ -16,17 +16,17 @@
 .quote-search input:focus {
     border-bottom: 2px solid rgba(128, 128, 128, 1);
 }
-/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡsearch-formㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
+/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡsearch-formㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
 
-/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡquote-sortㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
+/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡquote-sortㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
 #quote-sort {
     margin: 25px 0px;
     font-size: 30px;
 }
-/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡquote-sortㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
+/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡquote-sortㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
 
 
-/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡquote-listㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
+/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡquote-listㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
 #quote-list {
     width: 80%;
     height: 65vh;
@@ -71,6 +71,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    border: none;
+    background-color: transparent;
 }
-/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡquote-listㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
+/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡquote-listㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
 

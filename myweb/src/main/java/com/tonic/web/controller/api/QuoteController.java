@@ -30,11 +30,17 @@ public class QuoteController {
 		return quoteVO;
 	}
 	@RequestMapping("search")
-	public List<QuoteVO> search(@RequestBody HashMap<String, String> inputMap){
-		String keyword = inputMap.get("keyword");
-		String option = inputMap.get("option");
-		System.out.printf("keyword = %s / option = %s", keyword, option);					// POST ø‰√ª µ•¿Ã≈Õ »Æ¿Œ ∑Œ±◊
+	public List<QuoteVO> search(@RequestBody HashMap<String, String> input){
+		String keyword = input.get("keyword");
+		String option = input.get("option");
+		System.out.printf("keyword = %s / option = %s", keyword, option);					// POST Ïù∏Ìíã Îç∞Ïù¥ÌÑ∞ ÌôïÏù∏ Î°úÍ∑∏
 		List<QuoteVO> quoteList = quoteService.searchQuotes(keyword, option);
 		return quoteList;
+	}
+	@RequestMapping("del")
+	public void del(@RequestBody HashMap<String, String> input) {
+		String keyword = input.get("keyword");
+		System.out.println(keyword);
+		quoteService.delQuote(keyword);
 	}
 }

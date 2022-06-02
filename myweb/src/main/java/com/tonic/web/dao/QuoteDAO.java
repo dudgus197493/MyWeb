@@ -6,8 +6,11 @@ import com.tonic.web.entity.QuoteVO;
 
 public interface QuoteDAO {
 	
-	public int getLastId();													// ¸í¾ğ ÃÑ °¹¼ö ¹İÈ¯
-	public QuoteVO getRandomQuote(int maxId);								// ·£´ı ¸í¾ğ ÇÏ³ª ¹İÈ¯
-	public List<QuoteVO> getAllQuotes();									// ¸ğµç ¸í¾ğ ¸®½ºÆ® ¹İÈ¯
-	public List<QuoteVO> searchQuotes(String keyword, String option);		// ¸í¾ğ °Ë»ö ÈÄ ¸®½ºÆ®·Î ¹İÈ¯
+	public int getLastId();													//	ëª…ì–¸ì˜ ì´ ê°¯ìˆ˜ ë°˜í™˜
+	public QuoteVO getRandomQuote(int maxId);								// 	ëœë¤í•œ ëª…ì–¸ ë°˜í™˜
+	public List<QuoteVO> getAllQuotes();									// 	ëª¨ë“  ëª…ì–¸ ë°˜í™˜
+	public List<QuoteVO> searchQuotes(String keyword, String option);		// 	ê²€ìƒ‰í•œ ëª…ì–¸ ë°˜í™˜
+	
+	public void sortId();													//	id ì •ë ¬
+	public void delQuote(String keyword);									//  ë©ì–¸ ì‚­ì œ
 }
